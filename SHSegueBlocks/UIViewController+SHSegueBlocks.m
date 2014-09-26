@@ -79,6 +79,7 @@
   if(theBlock) blocks[theIdentifier] = [theBlock copy];
   [self.mapBlocks setObject:blocks forKey:self];
   [self performSegueWithIdentifier:theIdentifier sender:self];
+  [self.mapBlocks removeObjectForKey:self];
 }
 
 -(void)SH_performSegueWithIdentifier:(NSString *)theIdentifier
